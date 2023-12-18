@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(90deg,rgb(112, 184, 112), rgb(89, 89, 197),rgb(197, 141, 150));
+        margin-top: 80px;
+        color: rgb(99, 165, 42);
+    }
+    table{
+
+background-color: aquamarine;
+color: rgb(226, 147, 43);
+padding: 30px;
+border: 10px double rgb(255, 0, 157);
+
+    }
+</style>
+<body>
+    <center>
+        <h1>Display Access</h1>
+        <table border="5px">
+            <tr>
+                <th>
+                    pk
+                </th>
+                
+                <th>name</th>
+                <th>date</th>
+                <th>author </th>
+            </tr>
+            {% for to in topics %}
+              <tr>
+                <td>{{to.pk}}    </td>
+               
+                <td>{{to.name}}    </td>
+                <td>{{to.date}}    </td>
+                <td>{{to.author}}    </td>
+              </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
